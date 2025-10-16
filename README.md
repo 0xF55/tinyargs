@@ -22,15 +22,15 @@ int main(int argc,char** argv)
 	InitArgTable(&argTable,argv,argc);
 
     // flag (")
-	NewArgument("-s", "String", StrArg("Hello World"), ARG_STRING, &argTable);
-	NewArgument("--number", "Number", IntegerArg(5),ARG_INT,&argTable);
-	NewArgument("-b", "Boolean", BooleanArg(FALSE),ARG_BOOL,&argTable);
+	NewArgument("-n", "Your Name", StrArg("Hello World"), ARG_STRING, &argTable);
+	NewArgument("--age", "Your Age", IntegerArg(5),ARG_INT,&argTable);
+	NewArgument("--ismale", "Check if male", BooleanArg(FALSE),ARG_BOOL,&argTable);
 
 	Parse(&argTable);
 
-	printf("%s\n", GetStrArg(&argTable, "-s"));
-	printf("%d\n", GetIntArg(&argTable, "--number"));
-	printf("%d", GetBoolArg(&argTable, "-b"));
+	printf("%s\n", GetStrArg(&argTable, "-n"));
+	printf("%d\n", GetIntArg(&argTable, "--age"));
+	printf("%d", GetBoolArg(&argTable, "--ismale"));
 
 	return 0;
 }
