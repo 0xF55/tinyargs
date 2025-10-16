@@ -36,7 +36,7 @@ int main(int argc,char** argv)
 }
 ```
 - *InitArgTable()* to initialize the argtable
-- *NewArgument()* this functions adds a new argument to the table
+- *NewArgument()* this function adds a new argument to the table
 - **Arg()* these functions used for setting the default value for the flag
 - *Parse()* to parse the flags
 - *Get*Arg* these functions to get the value for a flag
