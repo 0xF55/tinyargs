@@ -21,7 +21,7 @@ int main(int argc,char** argv)
 	ArgTable argTable;
 	InitArgTable(&argTable,argv,argc);
 
-    // flag (")
+    // flag "-n, or "--name" + "Usage Comment" + "Default Value" + "Argument Type" + &Argtable
 	NewArgument("-n", "Your Name", StrArg("Hello World"), ARG_STRING, &argTable);
 	NewArgument("--age", "Your Age", IntegerArg(5),ARG_INT,&argTable);
 	NewArgument("--ismale", "Check if male", BooleanArg(FALSE),ARG_BOOL,&argTable);
